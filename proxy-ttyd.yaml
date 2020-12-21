@@ -10,16 +10,6 @@ items:
       serviceaccounts.openshift.io/oauth-redirectreference.primary: '{"kind":"OAuthRedirectReference","apiVersion":"v1","reference":{"kind":"Route","name":"proxy"}}'
 # Create a secure connection to the proxy via a route
 - apiVersion: v1
-  kind: Route
-  metadata:
-    name: proxy
-  spec:
-    to:
-      kind: Service
-      name: proxy
-    tls:
-      termination: Reencrypt
-- apiVersion: v1
   kind: Service
   metadata:
     name: proxy
