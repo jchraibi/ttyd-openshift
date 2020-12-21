@@ -4,6 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: devexp/ttyd
+      tag: devexp/ttyd:dev
+      registry: 127.0.0.1:34062
 timeout: 60
 notification: {}
